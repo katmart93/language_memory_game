@@ -6,7 +6,7 @@ function Cards() {
   const [memoCards, setMemoCards] = useState([]);
   const [points, setPoints] = useState(10);
 
-  // shuffling cards
+  // shuffling cards and setting points
   const shuffleCards = () => {
     const shuffledCards = [...cardImgs]
       .sort(() => 0.5 - Math.random())
@@ -21,8 +21,15 @@ function Cards() {
   return (
     <>
       <h1 className="test-header">Language Memory Game</h1>
+      <div>Points: {points}</div>
+      <div className="cards-grid">
+        {memoCards.map((card) => (
+          <div className="single-card" key={card.id}>
+            <img className="card-front" src={card.src} />
+          </div>
+        ))}
+      </div>
       <button onClick={shuffleCards}>Shuffle</button>
-      <div>{points}</div>
     </>
   );
 }
