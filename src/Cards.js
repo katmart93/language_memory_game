@@ -22,13 +22,7 @@ function Cards() {
     <>
       <h1 className="test-header">Language Memory Game</h1>
       <div>Points: {points}</div>
-      <div className="cards-grid">
-        {memoCards.map((card) => (
-          <div className="single-card" key={card.id}>
-            <img className="card-front" src={card.src} />
-          </div>
-        ))}
-      </div>
+      <CardsGrid memoCards={memoCards} />
       <button onClick={shuffleCards}>Shuffle</button>
     </>
   );
