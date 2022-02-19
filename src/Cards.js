@@ -8,15 +8,25 @@ function Cards() {
 
   // shuffling cards and setting points
   const shuffleCards = () => {
-    const shuffledCards = [...cardImgs]
-      .sort(() => 0.5 - Math.random())
-      .map((card) => ({ ...card, id: Math.random() }));
+    const shuffledCards = [...cardImgs];
+
+    const shuffleArray = (array) => {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      return array;
+    };
+
+    shuffleArray(shuffledCards);
 
     setMemoCards(shuffledCards);
     setPoints(10);
   };
 
-  console.log(memoCards, points);
+  console.log("====memoCards===", memoCards, points);
 
   return (
     <>
@@ -29,3 +39,5 @@ function Cards() {
 }
 
 export default Cards;
+
+//.map((card) => ({ ...card, id: Math.random() }));

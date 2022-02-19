@@ -1,13 +1,6 @@
+@import "generic/reset";
+@import "elements/CardsGrid";
+
 .test-header {
   color: red;
-}
-
-.card-front {
-  border-radius: 5px;
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-template-rows: repeat(3, 200px);
 }
