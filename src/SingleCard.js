@@ -1,13 +1,18 @@
 import React from "react";
 
-function SingleCard({ card }) {
+function SingleCard({ card, chooseCard }) {
   const handleClick = () => {
-    console.log("card clicked", card.src);
+    // console.log("card clicked:", card.type, card.src, card);
+    chooseCard(card);
   };
   return (
     <div className="single-card">
-      <img className="card-front" src={card.src} onClick={handleClick} />
-      <img className="card-reverse" src="/img/nebula_reverse_card.jpg" />
+      <img className="card-front" src={card.src} />
+      <img
+        className="card-reverse"
+        src="/img/nebula_reverse_card.jpg"
+        onClick={handleClick}
+      />
     </div>
   );
 }

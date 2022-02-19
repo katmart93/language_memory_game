@@ -5,6 +5,8 @@ import cardImgs from "./CardImgs";
 function Cards() {
   const [memoCards, setMemoCards] = useState([]);
   const [points, setPoints] = useState(10);
+  const [firstChoice, setFirstChoice] = useState();
+  const [secondChoice, setSecondChoice] = useState();
 
   // shuffling cards and setting points
   const shuffleCards = () => {
@@ -28,11 +30,17 @@ function Cards() {
 
   console.log("====memoCards===", memoCards, points);
 
+  // choosing a card
+
+  const chooseCard = (cardChosen) => {
+    console.log(cardChosen);
+  };
+
   return (
     <>
       <h1 className="test-header">Language Memory Game</h1>
       <div>Points: {points}</div>
-      <CardsGrid memoCards={memoCards} />
+      <CardsGrid memoCards={memoCards} chooseCard={chooseCard} />
       <button onClick={shuffleCards}>Shuffle</button>
     </>
   );
