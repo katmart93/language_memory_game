@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import SingleCard from "./SingleCard";
 
 function CardsGrid({ memoCards }) {
   return (
     <div className="cards-grid">
       {memoCards.map((card, idx) => (
-        <div className="single-card" key={idx}>
-          <img className="card-front" src={card.src} />
-          <img className="card-reverse" src="/img/nebula_reverse_card.jpg" />
-        </div>
+        <SingleCard card={card} key={idx} />
       ))}
     </div>
   );
