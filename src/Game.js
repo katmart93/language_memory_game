@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardsGrid from "./CardsGrid";
 import cardImgs from "./CardImgs";
 
@@ -31,9 +31,32 @@ function Game() {
   console.log("====memoCards===", memoCards, points);
 
   // choosing a card
-
   const chooseCard = (cardChosen) => {
-    console.log(cardChosen);
+    firstChoice ? setSecondChoice(cardChosen) : setFirstChoice(cardChosen);
+  };
+
+  // comparing selected cards
+  useEffect(() => {
+    if (firstChoice && secondChoice) {
+      if (firstChoice.type === secondChoice.type) {
+        console.log(
+          `1st card type: ${firstChoice.type}, 2nd card type: ${secondChoice.type}, the cards match!`
+        );
+        setPoints((prev) => prev + 1);
+        resetTurn();
+      } else {
+        console.log(
+          `1st card type: ${firstChoice.type}, 2nd card type: ${secondChoice.type}, the cards DO NOT match!`
+        );
+        setPoints((prev) => prev - 1);
+        resetTurn();
+      }
+    }
+  }, [firstChoice, secondChoice]);
+
+  const resetTurn = () => {
+    setFirstChoice(null);
+    setSecondChoice(null);
   };
 
   return (

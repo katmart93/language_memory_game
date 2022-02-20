@@ -2,7 +2,6 @@ import React from "react";
 
 function SingleCard({ card, chooseCard }) {
   const handleClick = () => {
-    // console.log("card clicked:", card.type, card.src, card);
     chooseCard(card);
   };
   return (
