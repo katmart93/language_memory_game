@@ -1,8 +1,8 @@
 import React from "react";
 
-function SingleCard({ card, chooseCard, flipped }) {
+function SingleCard({ card, chooseCard, flipped, cardsLocked }) {
   const handleClick = () => {
-    chooseCard(card);
+    if (!cardsLocked) chooseCard(card);
   };
   return (
     <div className="single-card">

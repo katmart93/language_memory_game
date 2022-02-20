@@ -7,6 +7,7 @@ function Game() {
   const [points, setPoints] = useState(10);
   const [firstChoice, setFirstChoice] = useState();
   const [secondChoice, setSecondChoice] = useState();
+  const [cardsLocked, setCardsLocked] = useState(false);
 
   // shuffling cards and setting points
   const shuffleCards = () => {
@@ -38,6 +39,7 @@ function Game() {
   // comparing selected cards
   useEffect(() => {
     if (firstChoice && secondChoice) {
+      setCardsLocked(true);
       if (firstChoice.type === secondChoice.type) {
         setMemoCards((prev) => {
           return prev.map((card) => {
@@ -55,7 +57,7 @@ function Game() {
         resetTurn();
       } else {
         setPoints((prev) => prev - 1);
-        resetTurn();
+        setTimeout(() => resetTurn(), 1000);
       }
     }
   }, [firstChoice, secondChoice]);
@@ -64,6 +66,7 @@ function Game() {
   const resetTurn = () => {
     setFirstChoice(null);
     setSecondChoice(null);
+    setCardsLocked(false);
   };
 
   return (
@@ -76,6 +79,7 @@ function Game() {
         chooseCard={chooseCard}
         firstChoice={firstChoice}
         secondChoice={secondChoice}
+        cardsLocked={cardsLocked}
       />
     </>
   );

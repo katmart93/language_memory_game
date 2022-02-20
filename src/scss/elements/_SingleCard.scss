@@ -12,8 +12,20 @@
 .card-front {
   position: absolute;
   transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
 }
 
 .flipped .card-front {
   transform: rotate(0deg);
+  transition-delay: 0.2s;
+}
+
+.card-reverse {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flipped .card-reverse {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
 }

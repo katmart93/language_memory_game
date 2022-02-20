@@ -1,7 +1,13 @@
 import React from "react";
 import SingleCard from "./SingleCard";
 
-function CardsGrid({ memoCards, chooseCard, firstChoice, secondChoice }) {
+function CardsGrid({
+  memoCards,
+  chooseCard,
+  firstChoice,
+  secondChoice,
+  cardsLocked,
+}) {
   return (
     <div className="cards-grid">
       {memoCards.map((card, idx) => (
@@ -9,6 +15,7 @@ function CardsGrid({ memoCards, chooseCard, firstChoice, secondChoice }) {
           card={card}
           key={idx}
           chooseCard={chooseCard}
+          cardsLocked={cardsLocked}
           flipped={card === firstChoice || card === secondChoice || card.match}
         />
       ))}
