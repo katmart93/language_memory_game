@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CardsGrid from "./CardsGrid";
 import cardImgs from "./CardImgs";
 
-function Cards() {
+function Game() {
   const [memoCards, setMemoCards] = useState([]);
   const [points, setPoints] = useState(10);
   const [firstChoice, setFirstChoice] = useState();
@@ -46,6 +46,6 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default Game;
 
 //.map((card) => ({ ...card, id: Math.random() }));

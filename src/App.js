@@ -1,8 +1,8 @@
 import React from "react";
-import Cards from "./Cards";
+import Game from "./Game";
 
 function App() {
-  return <Cards />;
+  return <Game />;
 }
 
 export default App;
