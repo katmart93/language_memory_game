@@ -54,6 +54,7 @@ function Game() {
     }
   }, [firstChoice, secondChoice]);
 
+  // reset turn
   const resetTurn = () => {
     setFirstChoice(null);
     setSecondChoice(null);

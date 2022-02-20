@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <div>
       <div className="logo">
-        Languag<span>Memory</span>Game
+        Language<span>Memory</span>Game
       </div>
       <Link to="/">Home</Link>
     </div>
