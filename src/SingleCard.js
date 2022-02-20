@@ -10,7 +10,7 @@ function SingleCard({ card, chooseCard }) {
       <img className="card-front" src={card.src} />
       <img
         className="card-reverse"
-        src="/img/nebula_reverse_card.jpg"
+        src="/img/zebra_reverse.jpg"
         onClick={handleClick}
       />
     </div>

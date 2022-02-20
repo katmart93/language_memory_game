@@ -40,8 +40,8 @@ function Cards() {
     <>
       <h1 className="test-header">Language Memory Game</h1>
       <div>Points: {points}</div>
-      <CardsGrid memoCards={memoCards} chooseCard={chooseCard} />
       <button onClick={shuffleCards}>Shuffle</button>
+      <CardsGrid memoCards={memoCards} chooseCard={chooseCard} />
     </>
   );
 }
