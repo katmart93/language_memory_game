@@ -27,6 +27,7 @@ function Game() {
 
     setMemoCards(shuffledCards);
     setPoints(10);
+    resetTurn();
   };
 
   console.log("====memoCards===", memoCards, points);
@@ -62,12 +63,18 @@ function Game() {
     }
   }, [firstChoice, secondChoice]);
 
+  console.log(firstChoice, secondChoice);
+
   // reset turn
   const resetTurn = () => {
     setFirstChoice(null);
     setSecondChoice(null);
     setCardsLocked(false);
   };
+
+  useEffect(() => {
+    shuffleCards();
+  }, []);
 
   return (
     <>
@@ -86,5 +93,3 @@ function Game() {
 }
 
 export default Game;
-
-//.map((card) => ({ ...card, id: Math.random() }));
