@@ -4,7 +4,7 @@ import cardImgs from "./CardImgs";
 
 function Game() {
   const [memoCards, setMemoCards] = useState([]);
-  const [points, setPoints] = useState(10);
+  const [points, setPoints] = useState(5);
   const [firstChoice, setFirstChoice] = useState();
   const [secondChoice, setSecondChoice] = useState();
   const [cardsLocked, setCardsLocked] = useState(false);
@@ -26,11 +26,11 @@ function Game() {
     shuffleArray(shuffledCards);
 
     setMemoCards(shuffledCards);
-    setPoints(10);
+    setPoints(5);
     resetTurn();
   };
 
-  console.log("====memoCards===", memoCards, points);
+  // console.log("====memoCards===", memoCards, points);
 
   // choosing a card
   const chooseCard = (cardChosen) => {
@@ -63,7 +63,7 @@ function Game() {
     }
   }, [firstChoice, secondChoice]);
 
-  console.log(firstChoice, secondChoice);
+  // console.log(firstChoice, secondChoice);
 
   // reset turn
   const resetTurn = () => {
