@@ -39,15 +39,21 @@ function Game() {
   useEffect(() => {
     if (firstChoice && secondChoice) {
       if (firstChoice.type === secondChoice.type) {
-        console.log(
-          `1st card type: ${firstChoice.type}, 2nd card type: ${secondChoice.type}, the cards match!`
-        );
+        setMemoCards((prev) => {
+          return prev.map((card) => {
+            if (
+              card.type === firstChoice.type ||
+              card.type === secondChoice.type
+            ) {
+              return { ...card, match: true };
+            } else {
+              return card;
+            }
+          });
+        });
         setPoints((prev) => prev + 1);
         resetTurn();
       } else {
-        console.log(
-          `1st card type: ${firstChoice.type}, 2nd card type: ${secondChoice.type}, the cards DO NOT match!`
-        );
         setPoints((prev) => prev - 1);
         resetTurn();
       }
@@ -65,7 +71,12 @@ function Game() {
       <h1 className="test-header">Language Memory Game</h1>
       <div>Points: {points}</div>
       <button onClick={shuffleCards}>Shuffle</button>
-      <CardsGrid memoCards={memoCards} chooseCard={chooseCard} />
+      <CardsGrid
+        memoCards={memoCards}
+        chooseCard={chooseCard}
+        firstChoice={firstChoice}
+        secondChoice={secondChoice}
+      />
     </>
   );
 }
