@@ -1,18 +1,3 @@
-.card-front,
-.card-reverse {
-  border-radius: 5px;
-}
-
-.single-card {
-  position: relative;
-}
-
-// .single-card img {
-//   border-radius: 5px;
-//   display: block;
-//   width: 100%;
-// }
-
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 200px);
