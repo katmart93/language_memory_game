@@ -8,6 +8,7 @@ function Game() {
   const [firstChoice, setFirstChoice] = useState();
   const [secondChoice, setSecondChoice] = useState();
   const [cardsLocked, setCardsLocked] = useState(false);
+  const [end, isEnd] = useState(false);
 
   // shuffling cards and setting points
   const shuffleCards = () => {
@@ -30,7 +31,42 @@ function Game() {
     resetTurn();
   };
 
-  // console.log("====memoCards===", memoCards, points);
+  useEffect(() => {
+    console.log(end, "??????");
+    if (end) {
+      fetch("http://localhost:3500/points", {
+        method: "POST",
+        body: JSON.stringify({ "final-score": points }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error("Błąd!");
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => console.log(error));
+    }
+  }, [end]);
+
+  useEffect(() => {
+    console.log(
+      "czy wsio",
+      memoCards.every((card) => card.match),
+      memoCards
+    );
+    if (memoCards.every((card) => card.match) && memoCards.length) {
+      isEnd(true);
+      //programaticly change route(react-rouer-dom) to display end game screen
+    }
+  }, [memoCards]);
+
+  console.log("====memoCards===", memoCards, points);
 
   // choosing a card
   const chooseCard = (cardChosen) => {
@@ -63,7 +99,7 @@ function Game() {
     }
   }, [firstChoice, secondChoice]);
 
-  // console.log(firstChoice, secondChoice);
+  console.log(firstChoice, secondChoice, points);
 
   // reset turn
   const resetTurn = () => {
