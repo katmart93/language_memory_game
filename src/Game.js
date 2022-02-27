@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardsGrid from "./CardsGrid";
 import cardImgs from "./CardImgs";
+import Modal from "./Modal";
 
 function Game() {
   const [memoCards, setMemoCards] = useState([]);
@@ -9,6 +10,7 @@ function Game() {
   const [secondChoice, setSecondChoice] = useState();
   const [cardsLocked, setCardsLocked] = useState(false);
   const [end, isEnd] = useState(false);
+  const [gameOver, setGameOver] = useState(false);
 
   // shuffling cards and setting points
   const shuffleCards = () => {
@@ -29,6 +31,8 @@ function Game() {
     setMemoCards(shuffledCards);
     setPoints(5);
     resetTurn();
+    setGameOver(false);
+    isEnd(false);
   };
 
   useEffect(() => {
@@ -108,6 +112,14 @@ function Game() {
     setCardsLocked(false);
   };
 
+  // game over
+  useEffect(() => {
+    if (points === 0) {
+      setGameOver(true);
+      setCardsLocked(true);
+    }
+  }, [points, cardsLocked]);
+
   useEffect(() => {
     shuffleCards();
   }, []);
@@ -123,6 +135,12 @@ function Game() {
         firstChoice={firstChoice}
         secondChoice={secondChoice}
         cardsLocked={cardsLocked}
+      />
+      <Modal
+        end={end}
+        points={points}
+        gameOver={gameOver}
+        shuffleCards={shuffleCards}
       />
     </>
   );
