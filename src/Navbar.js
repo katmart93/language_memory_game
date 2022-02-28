@@ -5,7 +5,9 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="logo">
-        Language<span>Memory</span>Game
+        <NavLink to="/">
+          Language<span>Memory</span>Game
+        </NavLink>
       </div>
       <div className="links">
         <NavLink to="/">Home</NavLink>
