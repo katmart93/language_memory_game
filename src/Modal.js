@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Modal({ end, gameOver, shuffleCards }) {
+  const navigate = useNavigate();
+
   return (
     <div>
       {(() => {
@@ -9,6 +12,7 @@ function Modal({ end, gameOver, shuffleCards }) {
             <div>
               <div>You won the game!</div>
               <button onClick={shuffleCards}>Play Again</button>
+              <button onClick={() => navigate("/scores")}>Scores</button>
             </div>
           );
         } else if (gameOver) {

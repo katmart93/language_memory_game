@@ -128,7 +128,7 @@ function Game() {
     <>
       <h1 className="test-header">Language Memory Game</h1>
       <div>Points: {points}</div>
-      <button onClick={shuffleCards}>Shuffle</button>
+      {/* <button onClick={shuffleCards}>Shuffle</button> */}
       <CardsGrid
         memoCards={memoCards}
         chooseCard={chooseCard}

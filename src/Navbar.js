@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -7,7 +7,10 @@ function Navbar() {
       <div className="logo">
         Language<span>Memory</span>Game
       </div>
-      <Link to="/">Home</Link>
+      <div className="links">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="scores">Scores</NavLink>
+      </div>
     </div>
   );
 }
