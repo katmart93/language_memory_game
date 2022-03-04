@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ScoresList from "./ScoresList";
+
+const URL = "http://localhost:3500/points";
 
 function Scores() {
-  return <div>Scores</div>;
+  const [scores, setScores] = useState(null);
+
+  useEffect(() => {
+    fetch(URL)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error("Błąd!");
+      })
+      .then((data) => {
+        setScores(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  return <div>{scores && <ScoresList scores={scores} />}</div>;
 }
 
 export default Scores;

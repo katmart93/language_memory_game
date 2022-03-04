@@ -1,60 +1,12 @@
 {
   "points": [
     {
-      "final-score": 6,
+      "final": 6,
       "id": 1
     },
     {
-      "final-score": 8,
+      "final": 8,
       "id": 2
-    },
-    {
-      "final-score": 8,
-      "id": 3
-    },
-    {
-      "final-score": 9,
-      "id": 4
-    },
-    {
-      "final-score": 7,
-      "id": 5
-    },
-    {
-      "final-score": 7,
-      "id": 6
-    },
-    {
-      "final-score": 9,
-      "id": 7
-    },
-    {
-      "final-score": 5,
-      "id": 8
-    },
-    {
-      "final-score": 5,
-      "id": 9
-    },
-    {
-      "final-score": 6,
-      "id": 10
-    },
-    {
-      "final-score": 5,
-      "id": 11
-    },
-    {
-      "final-score": 9,
-      "id": 12
-    },
-    {
-      "final-score": 7,
-      "id": 13
-    },
-    {
-      "final-score": 6,
-      "id": 14
     }
   ]
 }

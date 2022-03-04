@@ -3,6 +3,8 @@ import CardsGrid from "./CardsGrid";
 import cardImgs from "./CardImgs";
 import Modal from "./Modal";
 
+const URL = "http://localhost:3500/points";
+
 function Game() {
   const [memoCards, setMemoCards] = useState([]);
   const [points, setPoints] = useState(5);
@@ -36,11 +38,11 @@ function Game() {
   };
 
   useEffect(() => {
-    console.log(end, "??????");
+    // console.log(end, "??????");
     if (end) {
-      fetch("http://localhost:3500/points", {
+      fetch(URL, {
         method: "POST",
-        body: JSON.stringify({ "final-score": points }),
+        body: JSON.stringify({ final: points }),
         headers: {
           "Content-Type": "application/json",
         },
@@ -58,12 +60,13 @@ function Game() {
     }
   }, [end]);
 
+  //checking if all cards have match=true
   useEffect(() => {
-    console.log(
-      "czy wsio",
-      memoCards.every((card) => card.match),
-      memoCards
-    );
+    // console.log(
+    //   "czy wsio",
+    //   memoCards.every((card) => card.match),
+    //   memoCards
+    // );
     if (memoCards.every((card) => card.match) && memoCards.length) {
       isEnd(true);
       //programaticly change route(react-rouer-dom) to display end game screen
