@@ -1,11 +1,13 @@
 {
   "points": [
     {
-      "final": 6,
+      "final": 7,
+      "date": 21,
       "id": 1
     },
     {
       "final": 8,
+      "date": 27,
       "id": 2
     }
   ]

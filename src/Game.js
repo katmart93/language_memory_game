@@ -14,6 +14,11 @@ function Game() {
   const [end, isEnd] = useState(false);
   const [gameOver, setGameOver] = useState(false);
 
+  // setting date
+
+  const newDate = new Date();
+  const date = newDate.getMinutes();
+
   // shuffling cards and setting points
   const shuffleCards = () => {
     const shuffledCards = [...cardImgs];
@@ -42,7 +47,7 @@ function Game() {
     if (end) {
       fetch(URL, {
         method: "POST",
-        body: JSON.stringify({ final: points }),
+        body: JSON.stringify({ final: points, date: date }),
         headers: {
           "Content-Type": "application/json",
         },
@@ -69,7 +74,6 @@ function Game() {
     // );
     if (memoCards.every((card) => card.match) && memoCards.length) {
       isEnd(true);
-      //programaticly change route(react-rouer-dom) to display end game screen
     }
   }, [memoCards]);
 
