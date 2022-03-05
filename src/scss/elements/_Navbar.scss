@@ -1,9 +1,18 @@
 .navbar {
-  background-color: #5b283a;
+  // background-color: #5b283a;
   height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  &__container {
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__content {
+    background-color: #5b283a;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .logo {
