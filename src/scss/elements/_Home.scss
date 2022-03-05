@@ -1,0 +1,25 @@
+.home {
+  height: 86vh;
+  &__container {
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__content {
+    text-align: center;
+    line-height: 2;
+    padding: 80px 0;
+    p {
+      padding-bottom: 20px;
+    }
+  }
+
+  .new-game-btn {
+    text-decoration: none;
+    color: #5b283a;
+    text-transform: uppercase;
+    border: 2px solid #5b283a;
+    border-radius: 40px;
+    padding: 10px 20px;
+  }
+}
