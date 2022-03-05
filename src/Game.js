@@ -15,9 +15,20 @@ function Game() {
   const [gameOver, setGameOver] = useState(false);
 
   // setting date
+  const dateFormat = (dateObj) => {
+    const components = {
+      date: dateObj.getDate().toString().padStart(2, "0"),
+      month: (dateObj.getMonth() + 1).toString().padStart(2, "0"),
+      year: dateObj.getFullYear(),
+      hour: dateObj.getHours(),
+      minute: dateObj.getMinutes().toString().padStart(2, "0"),
+    };
+
+    return `${components.hour}:${components.minute} ${components.date}/${components.month}/${components.year}`;
+  };
 
   const newDate = new Date();
-  const date = newDate.getMinutes();
+  const date = dateFormat(newDate);
 
   // shuffling cards and setting points
   const shuffleCards = () => {
