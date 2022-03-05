@@ -3,11 +3,16 @@ import React from "react";
 function ScoresList({ scores }) {
   return (
     <div className="scores-list">
-      {scores.map((score, idx) => (
-        <p key={idx}>
-          {score.final} points {score.date}
-        </p>
-      ))}
+      <div className="scores-list__container">
+        <div className="scores-list__content">
+          {scores.map((score, idx) => (
+            <div className="single-scores" key={idx}>
+              <div className="scores">{score.final} points</div>
+              <div className="date">{score.date}</div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

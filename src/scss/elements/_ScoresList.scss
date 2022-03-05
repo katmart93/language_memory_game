@@ -1,0 +1,20 @@
+.scores-list {
+  height: 86vh;
+  &__container {
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__content {
+    width: 300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .single-scores {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+}
