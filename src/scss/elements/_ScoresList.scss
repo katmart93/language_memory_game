@@ -7,11 +7,18 @@
   }
   &__content {
     width: 300px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 40px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.589);
+    border-radius: 5px;
   }
 
-  .single-scores {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .single-score {
     display: flex;
     align-items: center;
     justify-content: space-between;
