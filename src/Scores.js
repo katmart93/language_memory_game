@@ -20,7 +20,11 @@ function Scores() {
       .catch((error) => console.log(error));
   }, []);
 
-  return <div>{scores && <ScoresList scores={scores} />}</div>;
+  return (
+    <div className="scores-list">
+      {scores && <ScoresList scores={scores} />}
+    </div>
+  );
 }
 
 export default Scores;
