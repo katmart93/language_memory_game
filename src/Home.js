@@ -8,8 +8,9 @@ function Home() {
         <div className="home__content">
           <h1>Welcome to language memory card game!</h1>
           <p>
-            Here you can learn and have fun at the same time. Just click on the
-            button below.
+            Here you can learn and have fun at the same time. Your task is to
+            find matching pairs of cards. Click on the button below to start a
+            game.
           </p>
           <Link to="game" className="new-game-btn">
             New Game

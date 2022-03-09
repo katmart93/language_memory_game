@@ -24,7 +24,7 @@
   }
 
   span {
-    color: #1b000a;
+    color: #22000c;
     font-weight: 700;
   }
 }
@@ -39,7 +39,11 @@
   }
 
   a:hover {
-    color: #1b000a;
+    color: #22000c;
     transition: 0.5s;
+  }
+
+  a:active {
+    color: #5a0021;
   }
 }
