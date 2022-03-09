@@ -1,0 +1,38 @@
+.modal {
+  &__content {
+    border: 2px solid #5b283a6e;
+    border-radius: 5px;
+    padding: 50px 150px;
+  }
+  &__message {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .modal-btn {
+    text-decoration: none;
+    color: #5b283a;
+    text-transform: uppercase;
+    border: 2px solid #5b283a;
+    border-radius: 40px;
+    padding: 10px 0;
+    width: 150px;
+  }
+
+  .btn-again {
+    margin-right: 5px;
+  }
+
+  .btn-scores {
+    margin-left: 5px;
+  }
+
+  .btn-game-over {
+    margin: 0 40px;
+  }
+
+  .modal-btn:hover {
+    color: white;
+    background-color: #5b283a;
+    transition: 0.5s;
+  }
+}
