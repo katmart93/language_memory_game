@@ -12,7 +12,10 @@ function Modal({ end, gameOver, shuffleCards }) {
             return (
               <div className="modal__content">
                 <div className="modal__message">You won the game!</div>
-                <button onClick={shuffleCards} className="modal-btn btn-again">
+                <button
+                  onClick={shuffleCards}
+                  className="modal-btn btn-try-again"
+                >
                   Play Again
                 </button>
                 <button

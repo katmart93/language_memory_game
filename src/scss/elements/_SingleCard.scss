@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+.single-card img:hover {
+  cursor: pointer;
+}
+
 .card-front {
   position: absolute;
   transform: rotateY(90deg);

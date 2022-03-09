@@ -6,24 +6,31 @@
     margin: 0 auto;
   }
   &__content {
-    width: 300px;
+    width: 350px;
     margin: 60px auto;
     padding-bottom: 20px;
-    border: 2px solid #5b283a6e;
+    border: 2px solid #5b283ad8;
     border-radius: 5px;
   }
 
   &__header {
+    background-color: #5b283ad8;
+    color: whitesmoke;
     display: flex;
+    font-size: 1.2em;
+    font-weight: 500;
     justify-content: space-between;
     padding: 20px 30px;
-    background-color: #5b283a6e;
   }
 
   .single-score {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
     padding: 10px 30px;
+  }
+
+  .score {
+    font-weight: 500;
   }
 }

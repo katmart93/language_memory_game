@@ -10,7 +10,7 @@ function ScoresList({ scores }) {
         </div>
         {scores.map((score, idx) => (
           <div className="single-score" key={idx}>
-            <div className="scores">{score.final} points</div>
+            <div className="score">{score.final} points</div>
             <div className="date">{score.date}</div>
           </div>
         ))}

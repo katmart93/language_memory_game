@@ -16,7 +16,7 @@
 }
 
 .logo {
-  font-size: 35px;
+  font-size: 2em;
 
   a {
     text-decoration: none;
@@ -25,15 +25,21 @@
 
   span {
     color: #1b000a;
+    font-weight: 700;
   }
 }
 
 .links {
-  font-size: 25px;
+  font-size: 1.5em;
 
   a {
     color: whitesmoke;
     text-decoration: none;
     padding-right: 40px;
+  }
+
+  a:hover {
+    color: #1b000a;
+    transition: 0.5s;
   }
 }

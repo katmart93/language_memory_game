@@ -6,26 +6,28 @@
     margin: 0 auto;
   }
   &__content {
-    text-align: center;
-    line-height: 2;
+    font-size: 24px;
+    line-height: 3;
     padding: 80px 0;
+    text-align: center;
     p {
       padding-bottom: 20px;
     }
   }
 
   .new-game-btn {
-    text-decoration: none;
     color: #5b283a;
-    text-transform: uppercase;
     border: 2px solid #5b283a;
     border-radius: 40px;
-    padding: 10px 20px;
+    font-weight: 500;
+    padding: 15px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 
   .new-game-btn:hover {
-    color: white;
     background-color: #5b283a;
+    color: whitesmoke;
     transition: 0.5s;
   }
 }

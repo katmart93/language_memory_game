@@ -3,12 +3,15 @@
     border: 2px solid #5b283a6e;
     border-radius: 5px;
     padding: 50px 150px;
+    text-align: center;
   }
   &__message {
+    font-size: 1.5em;
     padding-bottom: 20px;
     text-align: center;
   }
   .modal-btn {
+    font-weight: 700;
     text-decoration: none;
     color: #5b283a;
     text-transform: uppercase;
@@ -18,7 +21,7 @@
     width: 150px;
   }
 
-  .btn-again {
+  .btn-try-again {
     margin-right: 5px;
   }
 
@@ -26,12 +29,8 @@
     margin-left: 5px;
   }
 
-  .btn-game-over {
-    margin: 0 40px;
-  }
-
   .modal-btn:hover {
-    color: white;
+    color: whitesmoke;
     background-color: #5b283a;
     transition: 0.5s;
   }
