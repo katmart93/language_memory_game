@@ -143,23 +143,28 @@ function Game() {
   }, []);
 
   return (
-    <>
-      <div>Points: {points}</div>
-      {/* <button onClick={shuffleCards}>Shuffle</button> */}
-      <CardsGrid
-        memoCards={memoCards}
-        chooseCard={chooseCard}
-        firstChoice={firstChoice}
-        secondChoice={secondChoice}
-        cardsLocked={cardsLocked}
-      />
-      <Modal
-        end={end}
-        points={points}
-        gameOver={gameOver}
-        shuffleCards={shuffleCards}
-      />
-    </>
+    <div className="game">
+      <div className="game__container">
+        <div className="game__content">
+          <div className="points">Points: {points}</div>
+          <div className="cards">
+            <CardsGrid
+              memoCards={memoCards}
+              chooseCard={chooseCard}
+              firstChoice={firstChoice}
+              secondChoice={secondChoice}
+              cardsLocked={cardsLocked}
+            />
+          </div>
+          <Modal
+            end={end}
+            points={points}
+            gameOver={gameOver}
+            shuffleCards={shuffleCards}
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 

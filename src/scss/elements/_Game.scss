@@ -1,0 +1,18 @@
+.game {
+  height: 86vh;
+  &__container {
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+  }
+
+  .points {
+    padding-bottom: 20px;
+  }
+}
