@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Game from "./Game";
 import Scores from "./Scores";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="game" element={<Game />} />
         <Route path="scores" element={<Scores />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
