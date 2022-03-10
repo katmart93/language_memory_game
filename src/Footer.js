@@ -8,7 +8,9 @@ function Footer() {
       <div className="footer__container">
         <div className="footer__content">
           <div className="icons">
-            <FontAwesomeIcon icon={faGithub} className="github-icon" />
+            <a href="https://github.com/katmart93">
+              <FontAwesomeIcon icon={faGithub} className="github-icon" />
+            </a>
           </div>
           <div className="copyright">
             <small className="copyright-text">by katmart93</small>
