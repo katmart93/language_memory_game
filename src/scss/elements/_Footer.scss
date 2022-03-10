@@ -1,4 +1,29 @@
 .footer {
   background-color: #868686;
   height: 6.5vh;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__content {
+    text-align: center;
+    height: 100%;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .github-icon {
+    color: whitesmoke;
+    width: 30px;
+    height: 30px;
+    padding: 8px 0 2px 0;
+  }
+
+  .github-icon:hover {
+    cursor: pointer;
+  }
 }
