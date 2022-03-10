@@ -11,13 +11,14 @@
     text-align: center;
   }
   .modal-btn {
-    font-weight: 700;
-    text-decoration: none;
-    color: #5b283a;
-    text-transform: uppercase;
     border: 2px solid #5b283a;
     border-radius: 40px;
+    box-shadow: 0px 5px 15px 2px rgba(92, 81, 81, 0.41);
+    color: #5b283a;
+    font-weight: 700;
     padding: 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
     width: 150px;
   }
 

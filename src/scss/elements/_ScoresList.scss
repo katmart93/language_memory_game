@@ -4,10 +4,11 @@
     height: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    padding-top: 50px;
   }
   &__content {
     width: 350px;
-    margin: 60px auto;
+    margin: 0 auto 50px auto;
     padding-bottom: 20px;
     border: 2px solid #5b283ad8;
     border-radius: 5px;
