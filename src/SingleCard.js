@@ -7,8 +7,9 @@ function SingleCard({ card, chooseCard, flipped, cardsLocked }) {
   return (
     <div className="single-card">
       <div className={flipped ? "flipped" : ""}>
-        <img className="card-front" src={card.src} />
+        <img alt="front" className="card-front" src={card.src} />
         <img
+          alt="back"
           className="card-reverse"
           src="/img/zebra_reverse.jpg"
           onClick={handleClick}

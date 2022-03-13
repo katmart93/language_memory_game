@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import CardsGrid from "./CardsGrid";
 import cardImgs from "./CardImgs";
 import Modal from "./Modal";
@@ -31,7 +31,7 @@ function Game() {
   const date = dateFormat(newDate);
 
   // shuffling cards and setting points
-  const shuffleCards = () => {
+  const shuffleCards = useCallback(() => {
     const shuffledCards = [...cardImgs];
 
     const shuffleArray = (array) => {
@@ -51,10 +51,9 @@ function Game() {
     resetTurn();
     setGameOver(false);
     isEnd(false);
-  };
+  }, []);
 
   useEffect(() => {
-    // console.log(end, "??????");
     if (end) {
       fetch(URL, {
         method: "POST",
@@ -74,15 +73,10 @@ function Game() {
         })
         .catch((error) => console.log(error));
     }
-  }, [end]);
+  }, [end, points, date]);
 
   //checking if all cards have match=true
   useEffect(() => {
-    // console.log(
-    //   "czy wsio",
-    //   memoCards.every((card) => card.match),
-    //   memoCards
-    // );
     if (memoCards.every((card) => card.match) && memoCards.length) {
       isEnd(true);
     }
@@ -140,7 +134,7 @@ function Game() {
 
   useEffect(() => {
     shuffleCards();
-  }, []);
+  }, [shuffleCards]);
 
   return (
     <div className="game">
