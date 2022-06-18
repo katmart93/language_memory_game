@@ -1,4 +1,4 @@
-Language Memory Game
+**Language Memory Game**
 
 This project is a simple memory game, which helps to learn some basic German vocabulary.
 
