@@ -3,7 +3,7 @@ import CardsGrid from "./CardsGrid";
 import cardImgs from "./CardImgs";
 import Modal from "./Modal";
 
-const URL = "http://localhost:5000/points";
+const URL = "http://localhost:3000/points";
 
 function Game() {
   const [memoCards, setMemoCards] = useState([]);

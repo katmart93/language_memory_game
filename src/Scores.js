@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ScoresList from "./ScoresList";
 
-const URL = "http://localhost:5000/points";
+const URL = "http://localhost:3000/points";
 
 function Scores() {
   const [scores, setScores] = useState(null);
