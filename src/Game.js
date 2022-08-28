@@ -3,7 +3,7 @@ import CardsGrid from "./CardsGrid";
 import cardImgs from "./CardImgs";
 import Modal from "./Modal";
 
-const URL = "http://localhost:3500/points";
+const URL = "http://localhost:3000/points";
 
 function Game() {
   const [memoCards, setMemoCards] = useState([]);
@@ -68,9 +68,6 @@ function Game() {
           }
           throw new Error("Błąd!");
         })
-        .then((data) => {
-          console.log(data);
-        })
         .catch((error) => console.log(error));
     }
   }, [end, points, date]);
@@ -81,8 +78,6 @@ function Game() {
       isEnd(true);
     }
   }, [memoCards]);
-
-  console.log("====memoCards===", memoCards, points);
 
   // choosing a card
   const chooseCard = (cardChosen) => {
@@ -114,8 +109,6 @@ function Game() {
       }
     }
   }, [firstChoice, secondChoice]);
-
-  console.log(firstChoice, secondChoice, points);
 
   // reset turn
   const resetTurn = () => {
