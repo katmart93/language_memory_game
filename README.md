@@ -4,7 +4,7 @@ This project is a simple memory game, which helps to learn some basic German voc
 
 ## Technologies
 
-- React
+- React 17.0.2
 - React Router
 - Sass
 - REST API
